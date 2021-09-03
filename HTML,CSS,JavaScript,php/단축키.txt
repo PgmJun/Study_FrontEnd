@@ -1,0 +1,11 @@
+ㅇ단축키 
+
+
+
+Ctrl + Shift + H : 미리보기 기능 
+
+tab : 자동완성
+
+! 입력후 tab : 기본코드 자동완성
+
+Ctrl + Space Bar : 추천명령어
