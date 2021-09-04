@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<!-- link태그를 통해 css파일을 불러올 수 있다. -->
-	<link rel="stylesheet" type="text/css" href="https://localhost/style.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/style.css">
 </head>
 <body>
 	<header><!-- header: 제목부 표시 -->
@@ -17,8 +17,30 @@
 			<li><a href="http://localhost/page_op.html">연산자</a></li>
 		</ol>
 	</nav>
+
+	<div id="control">
+		<input type="button" value="white" id="btn_white">
+		<input type="button" value="black" id="btn_black">
+	</div>
+
 	<article> <!-- article: 본문 표시 -->
 
 	</article>
+	<script src="http://localhost/script.js"></script>
+
+	<!--Tawk.to를 통한 채팅기능 구현-->
+	<script type="text/javascript">
+	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+	(function(){
+	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+	s1.async=true;
+	s1.src='https://embed.tawk.to/6132e5bc649e0a0a5cd487ad/1fend2qvb';
+	s1.charset='UTF-8';
+	s1.setAttribute('crossorigin','*');
+	s0.parentNode.insertBefore(s1,s0);
+	})();
+	</script>
+	<!--End of Tawk.to Script-->
+
 </body>
 </html>
