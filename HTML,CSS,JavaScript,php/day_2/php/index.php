@@ -4,10 +4,17 @@
 	<meta charset="utf-8">
 	<!-- link태그를 통해 css파일을 불러올 수 있다. -->
 	<link rel="stylesheet" type="text/css" href="http://localhost/style.css">
+	<style>
+		header img {
+			float: right;
+			height: 100px;
+		}
+	</style>
 </head>
 <body id="target">
 	<header><!-- header: 제목부 표시 -->
-	<h1><a href="https://localhost/php/index.php">JavaScript</a></h1>
+			<img src="https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/course/94.png" alt="생활코딩"/>
+		<h1><a href="https://localhost/php/index.php">JavaScript</a></h1>
 	</header>
 
 	<nav>	<!-- nav: 네비게이터 표시 -->
