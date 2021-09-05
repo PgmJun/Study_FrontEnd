@@ -1,0 +1,42 @@
+header{
+  border-bottom: 1px gray solid;
+  padding: 20px;
+}
+
+nav ul{
+  padding: 0;
+  list-style: none;
+}
+
+header img {
+  float: right;
+  height: 100px;
+}
+
+nav{
+  border-right: 1px gray solid;
+  width:200px;
+  height: 600px;
+  float: left;
+}
+article{
+  float:left;
+  padding: 20px;
+  width:500px;
+}
+h2{
+  font-size: 30px;
+}
+#control{
+  float:right;
+}
+
+body.black{
+  background-color: black;
+  color:white;
+}
+
+body.white{
+  background-color: white;
+  color: black;
+}
