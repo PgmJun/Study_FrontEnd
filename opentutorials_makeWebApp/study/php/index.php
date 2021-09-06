@@ -41,10 +41,12 @@
 	 				그래서 if문을 통해 id가 있을때만 id값을 찾도록 정의해야한다.-->
 		<?php
 		if(empty($_GET['id']) === false){
-			$sql = 'SELECT * FROM topic WHERE id='.$_GET['id'];
+			$sql =
+			"SELECT topic.id,title,name,description FROM topic LEFT JOIN user ON topic.author = user.id WHERE topic.id =".$_GET['id'];
 			$result = mysqli_query($conn, $sql);
 			$row = mysqli_fetch_assoc($result);
-			echo '<h2>'.$row['title'],'</h2>';
+			echo '<h2>'.$row['title'].'</h2>';
+			echo '<p>'.$row['name'].'</p>';
 			echo $row['description'];
 		}
 		?>
