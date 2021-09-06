@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>audio</title>
+</head>
+<body>
+  <pre>
+    audio태그의 Attribute
+
+    src:	음악 파일 경로
+    preload:	재생 전에 음악 파일을 모두 불러올 것인지 지정
+    autoplay:	음악 파일을 자동의 재생 개시할 것인지 지정
+    loop:	음악을 반복할 것인지 지정
+    controls:	음악 재생 도구를 표시할 것인지 지정. 재생 도구의 외관은 브라우저마다 차이가 있다.
+  </pre>
+  <audio src="assets/audio/Kalimba.mp3" controls></audio>
+
+  <p>파일 형식 차이에 관한 문제는 source태그로 해결할 수 있다.</p>
+  <audio controls>
+      <source src="assets/audio/Kalimba.mp3" type="audio/mpeg">
+      <source src="assets/audio/Kalimba.ogg" type="audio/ogg">
+    </audio>
+</body>
+</html>
