@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        background: #eaeaed;
+        color: #666;
+        display: inline-block;
+        width: 90px;
+        height: 90px;
+        line-height: 90px;
+        margin: 0px 14px;
+        text-align: center;
+      }
+
+      .border-rounded {
+        /* 4 꼭지점에 대해 Radius 지정 */
+        border-radius: 5px;
+      }
+      .border-circle {
+        border-radius: 50%;
+      }
+      .border-football {
+        /* top-left & bottom-right | top-right & bottom-left */
+        border-radius: 15px 75px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="border-rounded">5px</div>
+    <div class="border-circle">50%</div>
+    <div class="border-football">15px 75px</div>
+  </body>
+</html>

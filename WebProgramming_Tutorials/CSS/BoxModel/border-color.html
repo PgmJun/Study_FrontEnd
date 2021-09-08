@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* border-color 프로퍼티는 border-style과 함께 사용하지 않으면 적용되지 않는다. */
+      p {
+        background: palegreen;
+        padding: 10px;
+        border-style: solid;
+      }
+      p.one {
+        border-color: red;
+      }
+      p.two {
+        border-color: green;
+      }
+      p.three {
+        border-color: red green blue yellow;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h2>border-color Property</h2>
+
+    <p class="one">border-color: red</p>
+    <p class="two">border-color: green</p>
+    <p class="three">border-color: red green blue yellow</p>
+  </body>
+</html>

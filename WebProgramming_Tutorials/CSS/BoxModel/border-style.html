@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      p {
+        background: palegreen;
+        padding: 10px;
+      }
+      p.dotted { border-style: dotted; }
+      p.dashed { border-style: dashed; }
+      p.solid  { border-style: solid; }
+      p.double { border-style: double; }
+      p.groove { border-style: groove; }
+      p.ridge  { border-style: ridge; }
+      p.inset  { border-style: inset; }
+      p.outset { border-style: outset; }
+      p.none   { border-style: none; }
+      p.hidden { border-style: hidden; }
+      /* 프로퍼티 값의 갯수에 따라 4개 방향(top, right, left, bottom)에 대하여 지정이 가능하다. */
+      p.mix    { border-style: dotted dashed solid double; }
+    </style>
+  </head>
+  <body>
+    <h2>border-style Property</h2>
+
+    <p class="dotted">dotted</p>
+    <p class="dashed">dashed</p>
+    <p class="solid">solid</p>
+    <p class="double">double</p>
+    <p class="groove">groove</p>
+    <p class="ridge">ridge</p>
+    <p class="inset">inset</p>
+    <p class="outset">outset</p>
+    <p class="none">none</p>
+    <p class="hidden">hidden</p>
+    <p class="mix">dotted dashed solid double</p>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .visible { visibility: visible; }
+    .hidden  { visibility: hidden; }
+
+    table, td { border: 1px solid black; }
+    .collapse { visibility: collapse; }
+    /* .collapse { visibility: hidden; } */
+
+    /*visible:	해당 요소를 보이게 한다 (기본값)
+      hidden:	해당 요소를 보이지 않게 한다. display: none;은 해당 요소의 공간까지 사라지게 하지만 visibility: hidden;은 해당 요소의 공간은 사라지지 않고 남아있게 된다.
+      collapse:	table 요소에 사용하며 행이나 열을 보이지 않게 한다.
+      none:	table 요소의 row나 column을 보이지 않게 한다. IE, 파이어폭스에서만 동작하며 크롬에서는 hidden과 동일하게 동작한다.*/
+  </style>
+</head>
+<body>
+  <h1 class="visible">visibility: visible</h1>
+  <h1 class="hidden">visibility: hidden</h1>
+  <h1 style="display:none">display:none</h1>
+
+  <table>
+    <tr>
+      <td>A</td>
+      <td>B</td>
+    </tr>
+    <tr class="collapse">
+      <td>C</td>
+      <td>D</td>
+    </tr>
+  </table>
+</body>
+</html>

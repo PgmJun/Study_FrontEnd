@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style media="screen">
+      /* opacity 프로퍼티는 요소의 투명도를 정의한다. 0.0 ~ 1.0의 값을 입력하며 0.0은 투명, 1.0은 불투명을 의미한다. */
+      div{
+        background-color:blue;
+        color:white;
+        opacity:0.5;
+        width:100px;
+        height:100px;
+        text-align:center;
+        line-height:100px;
+        transition: opacity 1s;
+      }
+      div:hover{
+        opacity:1;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      opacity: 0.5;
+    </div>
+  </body>
+</html>

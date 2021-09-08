@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* p 요소 중에서 첫번째 자식을 선택 */
+    p:first-child { color: red; }
+
+    /* p 요소 중에서 마지막 자식을 선택 */
+    /* body 요소의 두번째 p 요소는 마지막 자식 요소가 아니다.
+       body 요소의 마지막 자식 요소는 div 요소이다. */
+    p:last-child { color: blue; }
+  </style>
+</head>
+<body>
+  <p>This paragraph is the first child of its parent (body).</p>
+
+  <h1>Welcome to My Homepage</h1>
+  <p>This paragraph is not the first child of its parent.</p>
+
+  <div>
+    <p>This paragraph is the first child of its parent (div).</p>
+    <p>This paragraph is not the first child of its parent.</p>
+
+    <pre>:first-child	셀렉터에 해당하는 모든 요소 중 첫번째 자식인 요소를 선택한다.
+:last-child	셀렉터에 해당하는 모든 요소 중 마지막 자식인 요소를 선택한다.</pre>
+  </div>
+</body>
+</html>

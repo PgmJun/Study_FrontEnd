@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* p 요소 콘텐츠의 첫글자를 선택 */
+    p::first-letter { font-size: 3em; }
+    /* p 요소 콘텐츠의 첫줄을 선택 */
+    p::first-line   { color: red; }
+
+    /* h1 요소 콘텐츠의 앞 공간에 content 어트리뷰트 값을 삽입한다 */
+    h1::before {
+      content: " HTML!!! ";
+      color: blue;
+    }
+    /* h1 요소 콘텐츠의 뒷 공간에 content 어트리뷰트 값을 삽입한다 */
+    h1::after {
+      content: " CSS3!!!";
+      color: red;
+    }
+
+    /* 드래그한 콘텐츠를 선택한다 */
+    ::selection {
+      color: red;
+      background: yellow;
+    }
+  </style>
+</head>
+<body>
+  <h1>This is a heading</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo illum sunt distinctio sed, tempore, repellat rerum et ea laborum voluptatum! Quisquam error fugiat debitis maiores officiis, tenetur ullam amet in!</p>
+
+  <pre>
+    가상 요소는 요소의 특정 부분에 스타일을 적용하기 위하여 사용된다. 특정 부분이란 예를 들어 다음과 같다.
+
+    ㅇ  요소 콘텐츠의 첫글자 또는 첫줄
+
+    ㅇ  요소 콘텐츠의 앞 또는 뒤
+
+가상 요소에는 두개의 콜론(::)을 사용한다.
+CSS 표준에 의해 미리 정의된 이름이 있기 때문에 임의의 이름을 사용할 수 없다.
+  </pre>
+</body>
+</html>
