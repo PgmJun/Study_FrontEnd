@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      .normal-box{
+        width:100px; height:100px;
+        line-height:100px;
+        text-align: center;
+        color:white;
+      }
+      .absolute-box{
+        width:100px; height:100px;
+        line-height:100px;
+        text-align: center;
+        color:white;
+        position: absolute;
+      }
+      .orange{
+        background-color:orange;
+        z-index:1000;
+      }
+      .red{
+        background-color:red;
+        top:70px; left:70px;
+        z-index:100;
+      }
+      .green{
+        background-color:green;
+        top:140px; left:140px;
+        z-index:10;
+      }
+      .blue{
+        background-color:blue;
+        top:210px; left:210px;
+        z-index:1;
+      }
+    </style>
+    <title></title>
+  </head>
+  <body>
+    <div class="normal-box orange">orange</div>
+    <div class="absolute-box red">red</div>
+    <div class="absolute-box green">green</div>
+    <div class="absolute-box blue">blue</div>
+
+    <hr><br><br><br><br><br><br><br><br><br>
+
+    <pre>z-index 프로퍼티에 큰 숫자값을 지정할수록 화면 전면에 출력된다.
+      positon 프로퍼티가 <strong>static 이외인 요소에만</strong> 적용된다.</pre>
+  </body>
+</html>

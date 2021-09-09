@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    div {
+      width: 150px;
+      height: 150px;
+      padding: 10px;
+      margin: 40px;
+      border-radius: 6px;
+      border-color: gray;
+      border-style: dotted;
+    }
+    /*
+    한 단어의 길이가 길어서 부모 영역을 벗어난 텍스트의 처리 방법을 정의한다.
+    link 등을 표기할 때(e.g. https://poiemaweb.com/css3-font-text)
+    그 길이가 매우 길어지는데 이 프로퍼티를 사용하지 않으면 
+    부모 영역을 넘어가게 된다.
+    */
+    .word-wrap { word-wrap: break-word; }
+  </style>
+</head>
+<body>
+  <h1>word-wrap</h1>
+  <div>
+    Floccinaucinihilipilification https://poiemaweb.com/css3-font-text
+  </div>
+  <div class="word-wrap">
+    Floccinaucinihilipilification https://poiemaweb.com/css3-font-text
+  </div>
+</body>
+</html>

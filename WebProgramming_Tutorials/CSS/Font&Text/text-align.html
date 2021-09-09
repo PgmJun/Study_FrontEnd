@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      h1{text-align: center;}
+      h3{text-align: right;}
+      .left{text-align: left;}
+      .justify{text-align: justify;} /* 양쪽 정렬 (자동 줄바꿈시 오른쪽 경계선 부분 정리) */
+      a{text-align: center;}
+    </style>
+  </head>
+  <body>
+    <h1>Lorem ipsum</h1>
+  <h3>2016.03.07</h3>
+
+  <p class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <p class="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <a href='#'>Reference</a>
+  <!--
+  위 예제의 a 요소에 대한 중앙 정렬은 적용되지 않았다.
+  이는 a 요소는 inline 요소이기 때문이다.
+  inline 요소는 width 프로퍼티가 없으므로 중앙 개념이 존재하지 않는다.
+  a 요소에 display: block;을 지정한다면 중앙 정렬이 가능할 것이다.
+  -->
+  </body>
+</html>
