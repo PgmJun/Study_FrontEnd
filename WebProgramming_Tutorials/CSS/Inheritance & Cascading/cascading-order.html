@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* 선언된 순서에 따라 우선 순위가 적용된다. 즉, 나중에 선언된 스타일이 우선 적용된다. */
+    p { color: blue; }
+    p { color: red; }
+
+    .red { color: red; }
+    .blue { color: blue; }
+  </style>
+</head>
+<body>
+  <p>Will be RED.</p>
+  <p class="blue red">Will be BLUE.</p>
+</body>
+</html>

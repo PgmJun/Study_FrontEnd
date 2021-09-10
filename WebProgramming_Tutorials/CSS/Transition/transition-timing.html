@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    div {
+      font: bold 16px/50px "Open Sans";
+      color: white;
+      text-align: center;
+      width: 100px;
+      height: 50px;
+      background-color: red;
+      margin-bottom: 10px;
+      transition: width 2s;
+    }
+    /*
+    ease:	기본값. 느리게 시작하여 점점 빨라졌다가 느리지면서 종료한다.
+    linear:	시작부터 종료까지 등속 운동을 한다.
+    ease-in:	느리게 시작한 후 일정한 속도에 다다르면 그 상태로 등속 운동한다.
+    ease-out:	일정한 속도의 등속으로 시작해서 점점 느려지면서 종료한다.
+    ease-in-out:	ease와 비슷하게 느리게 시작하여 느리지면서 종료한다.
+    */
+
+    div:nth-child(1) {
+      transition-timing-function: ease;
+    }
+    div:nth-child(2) {
+     transition-timing-function: linear;
+    }
+    div:nth-child(3) {
+      transition-timing-function: ease-in;
+    }
+    div:nth-child(4) {
+      transition-timing-function: ease-out;
+    }
+    div:nth-child(5) {
+      transition-timing-function: ease-in-out;
+    }
+    div:hover {
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <h3>transition-timing-function</h3>
+  <div>ease</div>
+  <div>linear</div>
+  <div>ease-in</div>
+  <div>ease-out</div>
+  <div>ease-in-out</div>
+</body>
+</html>

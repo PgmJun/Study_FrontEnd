@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      /* transition: property duration function delay
+      기본값: all 0 ease 0
+       */
+       div {
+      font: bold 0.5em/50px "Open Sans";
+      color: white;
+      text-align: center;
+      width: 100px;
+      height: 50px;
+      margin-bottom: 10px;
+      background-color: red;
+    }
+    div:nth-of-type(1) {
+      /* property duration function delay */
+      transition: width 1s ease-in 1s;
+    }
+    div:nth-of-type(2) {
+      /* duration */
+      transition: 1s
+    }
+    div:nth-of-type(3) {
+      /* property duration */
+      transition: width 1s
+    }
+    div:nth-of-type(4) {
+      /* duration function */
+      transition: 1s ease-in;
+    }
+    div:nth-of-type(5) {
+      /* duration delay*/
+      transition: 1s 1s;
+    }
+    div:hover {
+      width: 300px;
+    }
+    </style>
+  </head>
+  <body>
+    <div>width 1s ease-in 1s</div>
+    <div>1s</div>
+    <div>width 1s</div>
+    <div>1s ease-in</div>
+    <div>1s 1s</div>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      div{
+        width:100px;
+        height:50px;
+        padding:10px;
+        color:white;
+        background-color:red;
+        margin-bottom: 10px;
+        transition-property: width, opacity;
+      }
+      div:nth-child(1){transition-duration: 0.5s;}
+      div:nth-child(2){transition-duration: 2s, 1s;}
+      div:nth-child(3){transition-duration: 5s, 2.5s;}
+      div:hover{
+        width:300px;
+        opacity:0.1;
+      }
+      /*
+      * shorthand syntax
+      transition: width 2s, opacity 4s;
+      transition 프로퍼티만으로 축약 표현이 가능하다.
+      */
+    </style>
+  </head>
+  <body>
+    <div>0.5s</div>
+    <div>2s, 1s</div>
+    <div>5s 2.5s</div>
+  </body>
+</html>

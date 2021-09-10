@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style">
+      /*
+      transition-property 프로퍼티는 트랜지션의 대상이 되는 CSS 프로퍼티명을 지정한다.
+      지정하지 않는 경우 모든 프로퍼티가 트랜지션의 대상이 된다.
+      복수의 프로퍼티를 지정하는 경우 쉼표(,)로 구분한다.
+      */
+      div {
+        width: 100px;
+        height: 50px;
+        background-color:red;
+        transition-property: width, background-color;
+        transition: 2s, 2s;
+      }
+      div:hover{
+        width:300px;
+        background-color:blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

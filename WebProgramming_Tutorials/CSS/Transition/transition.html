@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .ex1 {
+      width: 100px;
+      height: 100px;
+      background: red;
+      /* 트랜지션 효과: 모든 프로퍼티의 변화를 2초에 걸쳐 전환한다. */
+      /*
+      트랜지션(transition)은 상태 변화에 동반하여 변경되는 CSS 프로퍼티 값에 의한 표시의 변화를
+      부드럽게 하기 위해 애니메이션 속도를 조절한다.
+
+      즉, 프로퍼티 값의 변경이 표시의 변화에 즉시 영향을 미치게 하는 대신
+      그 프로퍼티 값의 변화가 일정 시간(duration)에 걸쳐 일어나도록 하는 것이다.
+      */
+      transition: all 2s;
+    }
+    .ex1:hover {
+      border-radius: 50%;
+      background: blue;
+    }
+
+    .ex2 {
+      width: 100px;
+      height: 100px;
+      background: red;
+    }
+    .ex2:hover {
+      border-radius: 50%;
+      background: blue;
+      transition: all 2s;
+      /*
+      div 셀렉터의 룰셋에 트랜지션을 설정하면 마우스가 올라갈 때(hover on)와 마우스가
+      내려올 때(hover off) 모두 트랜지션이 발동한다.
+
+      하지만 div:hover 셀렉터의 룰셋에 트랜지션을 설정하면 마우스가 올라갈 때(hover on)는
+      트랜지션이 발동하지만 마우스가 내려올 때(hover off)는 트랜지션이 발동하지 않는다.
+      */
+    }
+  </style>
+</head>
+<body>
+  <div class="ex1">holy</div>
+  <div class="ex2">moly</div>
+</body>
+</html>

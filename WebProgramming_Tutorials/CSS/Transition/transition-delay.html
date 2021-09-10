@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      div{
+        width:100px;
+        height:50px;
+        font: bold 16px/50px "Open Sans";
+        color:white;
+        text-align: center;
+        background-color: red;
+        margin-bottom:10px;
+        transition: width 1px;
+      }
+      /* ransition-delay로 대기 사간을 지정하여 프로퍼티의 값이 변화하여도
+      즉시 트랜지션이 실행되지 않고, 일정 시간 대기한 후 트랜지션이 실행되도록 한다. */
+      div:nth-of-type(1){
+        transition-delay: 0s;
+      }
+      div:nth-of-type(1){
+        transition-delay: 1s;
+      }
+      div:nth-of-type(1){
+        transition-delay: 3s;
+      }
+      div:hover{
+        width:300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>0s</div>
+    <div>1s</div>
+    <div>3s</div>
+  </body>
+</html>

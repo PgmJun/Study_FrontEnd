@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /*
+    대상을 명확하게 특정할수록 명시도가 높아지고 우선순위가 높아진다.
+
+    !important > 인라인 스타일 > 아이디 선택자 > 클래스/어트리뷰트/가상 선택자 > 태그 선택자 > 전체 선택자 > 상위 요소에 의해 상속된 속성
+    */
+    p        { color: red !important; }
+    #thing   { color: blue; }
+
+    div.food { color: chocolate; }
+    .food    { color: green; }
+    div      { color: orange; }
+  </style>
+</head>
+<body>
+  <p id="thing">Will be Red.</p>
+  <div class="food">Will be Chocolate.</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      .box{
+        font-weight:bold;
+        font-size:30px;
+        color:white;
+        height:50px;
+        line-height:50px;
+        padding:10px;
+        margin:0 10px;
+      }
+      .d1{
+        background-color:red;
+        float: left;
+      }
+      .d2{
+        background-color:orange;
+        overflow:hidden;
+        /*
+        위 예제를 보면 두 요소는 차례대로 정렬된 것처럼 보이지만 사실은 float 프로퍼티가
+        선언된 요소가 다음 요소 위에 떠 있는(부유하고 있는) 상태이다.
+        따라서 두 요소간의 margin은 제대로 표현되지 않는다.
+
+        이것은 두번째 요소에 float 프로퍼티를 선언하지 않았기 때문에 발생하는 박스 모델 상의 문제이다.
+        이 문제를 해결하는 가장 쉬운 방법은 float 프로퍼티를 선언하지 않은 요소(.d2)에
+        overflow: hidden 프로퍼티를 선언하는 것이다.
+        */
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+    width 프로퍼티를 선언하지 않은 block 레벨 요소에 float 프로퍼티가 선언되면
+    width가 inline 요소와 같이 content에 맞게 최소화되고
+    다음 요소 위에 떠 있게(부유하게) 된다.
+  -->
+    <div class="box d1">
+      float: left;
+    </div>
+    <div class="box d2">
+      div
+    </div>
+  </body>
+</html>

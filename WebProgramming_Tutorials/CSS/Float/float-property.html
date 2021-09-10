@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /*
+    float 프로퍼티는 해당 요소를 다음 요소 위에 떠 있게(부유하게) 한다.
+    여기서 떠 있다(float)는 의미는 요소가 기본 레이아웃 흐름에서 벗어나
+    요소의 모서리가 페이지의 왼쪽이나 오른쪽에 이동하는 것이다.
+    float 프로퍼티를 사용할 때 요소의 위치를 고정시키는 position 프로퍼티의 absolute를 사용하면 안된다.
+    */
+
+
+    /*
+    none:	요소를 떠 있게 하지 않는다. (기본값)
+    right:	요소를 오른쪽으로 이동시킨다
+    left:	요소를 왼쪽으로 이동시킨다.
+    */
+    img {
+      float: left;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://poiemaweb.com/img/doug.jpg">
+  <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+</body>
+</html>
