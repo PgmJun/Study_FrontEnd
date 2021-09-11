@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      font: bold 1em/100px san-serif;
+      text-align: center;
+      color: #fff;
+      background: red;
+      margin-bottom: 10px;
+      position: relative;
+      /*name duration timing-function delay iteration-count direction fill-mode play-state*/
+      animation: myAnimation 2s linear 2s;
+    }
+    div:nth-of-type(1) {
+      animation-fill-mode: none;
+    }
+    div:nth-of-type(2) {
+      animation-fill-mode: forwards;
+    }
+    div:nth-of-type(3) {
+      animation-fill-mode: backwards;
+    }
+    div:nth-of-type(4) {
+      animation-fill-mode: both;
+    }
+    @keyframes myAnimation {
+      0%   { left: 0px;   background: yellow; }
+      100% { left: 200px; background: blue; }
+    }
+  </style>
+</head>
+<body>
+  <h1>animation-fill-mode</h1>
+
+  <div>none</div>
+  <p>대기 : 시작 프레임(from)에 설정한 스타일을 적용하지 않고 대기한다.</p>
+  <p>종료 : 애니메이션 실행 전 상태로 애니메이션 요소의 프로퍼티값을 되돌리고 종료한다.</p>
+
+  <div>forwards</div>
+  <p>대기 : 시작 프레임(from)에 설정한 스타일을 적용하지 않고 대기한다.
+  <p>종료 : 종료 프레임(to)에 설정한 스타일을 적용하고 종료한다.
+
+  <div>backwards</div>
+  <p>대기 : 시작 프레임(from)에 설정한 스타일을 적용하고 대기한다.
+  <p>종료 : 애니메이션 실행 전 상태로 애니메이션 요소의 프로퍼티값을 되돌리고 종료한다.
+
+  <div>both</div>
+  <p>대기 : 시작 프레임(from)에 설정한 스타일을 적용하고 대기한다.
+  <p>종료 : 종료 프레임(to)에 설정한 스타일을 적용하고 종료한다.
+</body>
+</html>
