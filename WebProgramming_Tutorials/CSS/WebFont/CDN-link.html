@@ -1,0 +1,12 @@
+웹폰트를 사용하는 방법 중 가장 간단한 방법은 CDN 링크를 사용하는 것이다.
+다음은 구글에서 제공하는 웹폰트를 사용하는 방법이다.
+
+Google Font 에서 사용하고자 하는 웹폰트를 선택한다.
+한글 웹페이지에 자주 사용되는 나눔고딕은 Google Font Early Access에서 찾을 수 있다.
+아래 구문을 CSS 파일에 추가한다.
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+* { font-family: 'Nanum Gothic', sans-serif; }
+
+@import rule의 url 함수는 서버에서 혹은 지정된 url에서 파일을 찾아 다운로드한다.
