@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+  <style>
+  /* 일반적으로 반응형 웹 디자인은 viewport 너비(width 프로퍼티)를 기준으로 한다.
+
+viewport의 width 프로퍼티를 이용하여 viewport 너비에 따라 반응하는 범위(breakpoint)를 지정할 수 있다. */
+
+  /*==========  Mobile First Method  ==========*/
+/* All Device */
+
+/* Custom, iPhone Retina : 320px ~ */
+@media only screen and (min-width : 320px) {
+
+}
+/* Extra Small Devices, Phones : 480px ~ */
+@media only screen and (min-width : 480px) {
+
+}
+/* Small Devices, Tablets : 768px ~ */
+@media only screen and (min-width : 768px) {
+
+}
+/* Medium Devices, Desktops : 992px ~ */
+@media only screen and (min-width : 992px) {
+
+}
+/* Large Devices, Wide Screens : 1200px ~ */
+@media only screen and (min-width : 1200px) {
+
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+/* All Device */
+
+/* Large Devices, Wide Screens : ~ 1200px */
+@media only screen and (max-width : 1200px) {
+
+}
+/* Medium Devices, Desktops : ~ 992px */
+@media only screen and (max-width : 992px) {
+
+}
+/* Small Devices, Tablets : ~ 768px */
+@media only screen and (max-width : 768px) {
+
+}
+/* Extra Small Devices, Phones : ~ 480px */
+@media only screen and (max-width : 480px) {
+
+}
+/* Custom, iPhone Retina : ~ 320px */
+@media only screen and (max-width : 320px) {
+
+/*============다음은 임의로 해상도를 3단계로 구분하여 breakpoint를 정의한 예제이다.==========*/
+/* 801px ~ */
+* { color: black; }
+
+/* ~ 800px */
+@media screen and (max-width: 800px) {
+* { color: blue; }
+}
+
+/* ~ 480px */
+@media screen and (max-width: 480px) {
+* { color: red; }
+   }
+}
+  </style>
+</head>
+<body>
+  <h1>@media practice</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <!-- 반응형 웹디자인에 사용되는 핵심 기술은 @media이다.
+
+    @media을 사용하여 미디어 별로 style을 지정하는 것을 Media Query라 한다. 디바이스를 지정하는 것뿐만 아니라 디바이스의 크기나 비율까지 구분할 수 있다.
+
+    다음은 Media Query의 문법이다. -->
+</body>
+</html>

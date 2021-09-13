@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=divice-width, initial-scale:1.0">
+  <style>
+    /* Media Query */
+      /* for Desktop: 801px ~ */
+    /* Simple Reset CSS */
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #58666e;
+      background-color: #f0f3f4;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjus: 100%;  /* iphone font size 변경 방지 */
+    }
+    li { list-style: none; }
+    a { text-decoration: none; }
+    h1, h2, h3, h4, h5, h6, p {
+      margin: 10px 5px;
+    }
+    h1 { font-size: 1.8em; }
+
+    #wrap {
+      width: 100%;
+      /* margin-top = header height */
+      margin-top: 60px;
+    }
+
+    /* Navigation bar */
+    header {
+      /* for sticky header */
+      position: fixed;
+      top: 0;
+
+      width: 100%;
+      height: 60px;
+      z-index: 2000;
+      background-color: #fff;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+    }
+    .logo {
+      display: inline-block;
+      height: 36px;
+      margin: 12px 0 12px 25px;
+    }
+    .logo > img { height: 36px; }
+    nav {
+      float: right;
+    }
+    .nav-items {
+      margin-right: 20px;
+    }
+    .nav-items > li {
+      display: inline-block;  /* 가로정렬 */
+    }
+    .nav-items > li > a {
+      /* for Vertical Centering */
+      line-height: 60px;
+      padding: 0 30px;
+      color: rgba(0, 0, 0, 0.4);
+    }
+    .nav-items > li > a:hover {
+      color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* contents */
+    /* clearfix */
+    #content-wrap:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    aside {
+      /* for fixed side bar */
+      position: fixed;
+      top: 60px;
+      bottom: 0;
+      width: 200px;  /* 너비 고정 */
+      padding-top: 25px;
+      background-color: #333;
+    }
+    /* aside navigation */
+    aside > ul {
+      width: 200px;
+    }
+    aside > ul > li > a {
+      display: block;
+      color: #fff;
+      padding: 10px 0 10px 20px;
+    }
+    aside > ul > li > a.active {
+      background-color: #4CAF50;
+    }
+    aside > ul > li > a:hover:not(.active) {
+      background-color: #555;
+    }
+    aside > h1 {
+      padding: 20px 0 20px 20px;
+      color: #fff;
+    }
+    /* Section */
+    section {
+      float: right;
+      /* aside width */
+      margin-left: 200px;
+    }
+    article {
+      margin: 10px;
+      padding: 25px;
+      background-color: white;
+    }
+    /* footer */
+    footer {
+      /* footer를 aside위에 올리기 위해 사용(부유객체) */
+      position: absolute;
+
+      height: 60px;
+      width: 100%;
+      padding: 0 25px;
+      line-height: 60px;
+      color: #8a8c8f;
+      border-top: 1px solid #dee5e7;
+      background-color: #f2f2f2;
+    }
+    /* Media Query는 기술 순서에 의미가 있다.
+    만일 스마트폰용 스타일을 태블릿용 스타일보다 먼저 기술하면 최종적으로 태블릿용 스타일이 적용된다.
+    Non Mobile First Method의 경우, max-width의 값이 큰 것부터 기술하여 한다.
+    */
+    
+    /* for tablet: ~ 800px */
+  @media screen and (max-width: 800px) {
+    header {
+      height: 120px;
+      text-align: center;
+    }
+    aside {
+      top: 120px;
+    }
+    #wrap {
+      /* margin-top = header height */
+      margin-top: 120px;
+    }
+    nav {
+      float: none;
+      /*margin-right: 0;*/
+    }
+  }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <a class="logo" href="#home"><img src="https://poiemaweb.com/img/logo.png"></a>
+      <nav>
+        <ul class="nav-items">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="content-wrap">
+      <aside>
+        <h1>Aside</h1>
+        <ul>
+          <li><a href="#" class="active">London</a></li>
+          <li><a href="#">Paris</a></li>
+          <li><a href="#">Tokyo</a></li>
+          <li><a href="#">Newyork</a></li>
+        </ul>
+      </aside>
+      <section>
+        <article id="london">
+          <h1>London</h1>
+          <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+          <p>Standing on the River Thames, London has been a major settlement for two millennia,its history going back to its founding by the Romans, who named it Londinium.</p>
+          <p>London, also referred to as Greater London, is one of 9 regions of England and the top-level subdivision covering most of the city's metropolis. The small ancient City of London at its core once comprised the whole settlement, but as its urban area grew, the Corporation of London resisted attempts to amalgamate the city with its suburbs, causing "London" to be defined in a number ways for different purposes.</p>
+        </article>
+        <article id="paris">
+          <h1>Paris</h1>
+          <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+          <p>Standing on the River Thames, London has been a major settlement for two millennia,its history going back to its founding by the Romans, who named it Londinium.</p>
+          <p>London, also referred to as Greater London, is one of 9 regions of England and the top-level subdivision covering most of the city's metropolis. The small ancient City of London at its core once comprised the whole settlement, but as its urban area grew, the Corporation of London resisted attempts to amalgamate the city with its suburbs, causing "London" to be defined in a number ways for different purposes.</p>
+        </article>
+        <article id="tokyo">
+          <h1>Tokyo</h1>
+          <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+          <p>Standing on the River Thames, London has been a major settlement for two millennia,its history going back to its founding by the Romans, who named it Londinium.</p>
+          <p>London, also referred to as Greater London, is one of 9 regions of England and the top-level subdivision covering most of the city's metropolis. The small ancient City of London at its core once comprised the whole settlement, but as its urban area grew, the Corporation of London resisted attempts to amalgamate the city with its suburbs, causing "London" to be defined in a number ways for different purposes.</p>
+        </article>
+        <article id="newyork">
+          <h1>Newyork</h1>
+          <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+          <p>Standing on the River Thames, London has been a major settlement for two millennia,its history going back to its founding by the Romans, who named it Londinium.</p>
+          <p>London, also referred to as Greater London, is one of 9 regions of England and the top-level subdivision covering most of the city's metropolis. The small ancient City of London at its core once comprised the whole settlement, but as its urban area grew, the Corporation of London resisted attempts to amalgamate the city with its suburbs, causing "London" to be defined in a number ways for different purposes.</p>
+        </article>
+      </section>
+      <!-- end of content-wrap -->
+    </div>
+    <footer>© Copyright 2016 ungmo2</footer>
+  <!-- end of wrap   -->
+  </div>
+</body>
+</html>

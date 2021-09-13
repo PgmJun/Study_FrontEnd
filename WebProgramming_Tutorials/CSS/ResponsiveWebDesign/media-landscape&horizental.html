@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /*
+    다음은 화면이 세로일 때, 가로일 때를 구분하는 예제이다.
+    주의할 점은 데스크탑은 언제나 가로 화면이기 때문에 device-width로 스마트폰의 해상도를 지정하지 않으면 
+    데스크탑에서도 가로화면 시 style이 적용되는 문제가 발생한다.
+    */
+    /* 세로  */
+    * { color: black; }
+    /* 가로 */
+    /* Desktop의 화면은 가로화면(landscape)이므로 아래 rule이 적용된다. */
+    /*
+    @media screen and (orientation: landscape) {
+      { color: blue; }
+    }
+    */
+
+    /* Landscape */
+    @media screen
+      /* 디바이스가 모바일일때(device-width 0 ~ 768px) */
+      and (max-device-width: 760px)
+      /* 가로 */
+      and (orientation: landscape) {
+      * { color: blue; }
+    }
+  </style>
+</head>
+<body>
+  <h1>@media practice: orientation</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</body>
+</html>

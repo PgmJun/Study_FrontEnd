@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- 일반적으로 viewport meta tag는 모바일 디바이스에서만 적용된다. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 위 예제는 가장 일반적인 viewport 설정이다. 가로폭을 디바이스의 가로폭에 맞추고 초기 화면 배율을 100%로 설정하는 것을 의미한다. -->
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <pre>
+viewport란 웹페이지의 가시영역을 의미한다.
+viewport는 디바이스에 따라 차이가 있다.
+예를 들어 모바일 브라우저는 주화면이 세로 화면이고 윈도우 resize가 불가하며
+화면 터치를 사용하는 등 데스크탑 브라우저와 구성이나 형태가 다르다.
+또한 모바일의 화면은 데스크탑 화면보다 훨씬 작으므로
+데스크탑용 웹페이지를 그대로 모바일에 출력하면 가독성이 현저히 나빠진다.
+따라서 viewport를 이용하여 디바이스의 특성과 디바이스의 화면 크기 등을 고려하여
+각종 디바이스 사용자에게 최적화된 웹페이지를 제공할 수 있다.
+
+viewport meta tag는 브라우저의 화면 설정과 관련된 정보를 제공한다.
+width :	viewport 너비(px).
+기본값: 980px
+사용예) width=240 	/ 	width=device-width
+
+height :	viewport 높이(px)
+사용예) height=800 	/ 	width=device-height
+
+initial-scale	: viewport 초기 배율
+사용예) initial-scale=1.0
+
+user-scale : 확대 축소 가능 여부
+사용예) user-scale=no
+
+maximum-scale :	viewport 최대 배율
+사용예) maximum-scale=2.0
+
+minimum-scale :	viewport 최소 배율
+사용예) minimum-scale=1.0
+
+meta tag에서는 px단위를 사용하며 단위 표현은 생략한다.
+복수개의 프로퍼티를 사용할 때는 쉼표(,)로 구분한다.
+    </pre>
+  </body>
+</html>
