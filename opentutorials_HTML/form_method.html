@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  div{
+    border: 3px dotted black;
+    margin:20px;
+    padding:10px;
+  }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>POST method</h1>
+    <form action="http://localhost/method.php" method="post">
+      <input type="text" name="id">
+      <input type="password" name="pwd">
+      <input type="submit">
+    </form>
+  </div>
+
+  <div>
+    <h1>GET method</h1>
+    <form action="http://localhost/method.php" method="get">
+      <input type="text" name="id">
+      <input type="password" name="pwd">
+      <input type="submit">
+    </form>
+  </div>
+
+</body>
+</html>
