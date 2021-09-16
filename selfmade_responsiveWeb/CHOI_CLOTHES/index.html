@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHOI Clothes</title>
+  <style>
+    * {
+      margin: 0; padding: 0;
+      box-sizing:border-box;
+    }
+    html{
+      width:100%;
+      height: 100%;
+    }
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #58666e;
+      background-color: white;
+    }
+    li{
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    h1{ font-size: 2em;}
+    header{
+      position: fixed;
+      top:0;
+      width:100%;
+      height:150px;
+      z-index: 2000;
+      background-color: black;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+    }
+    nav{
+      float:right;
+    }
+    #logo{
+      display: inline-block;
+      height:75px;
+      line-height: 75px;
+    }
+    #logo > h1{
+      text-align:center;
+      margin-left:20px;
+      color:white;
+    }
+    .nav-items > li {
+      display: inline-block;
+    }
+    .nav-items > li > a {
+      line-height: 75px;
+      padding:30px;
+      color: gray;
+    }
+    .nav-items > li > a:hover{
+      transition: 0.3s;
+      color:lightgray;
+    }
+    #search{
+      height: 75px;
+      line-height: 75px;
+    }
+    #search-history{
+      float:right;
+    }
+    #search-history li:nth-child(1){
+      font-weight: bold;
+      color: gray;
+    }
+    #search-history > ul > li {
+      display: inline-block;
+      padding:0 3px 0 3px;
+    }
+    #search-bar{
+      float:right;
+    }
+    #search-bar > input[type="text"] {
+      width:400px;
+      height:40px;
+      font-size: 15px;
+    }
+    #search-bar > input[type="submit"] {
+      height:40px; width:50px;
+      background-color: white;
+      border-radius: 5px;
+      margin-right: 30px;
+    }
+    #content-wrap {
+      margin-top: 150px;
+    }
+    /* clearfix */
+    #content-wrap:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    aside{
+      position: fixed;
+      top:0;
+      bottom:0;
+      width:200px;
+      margin-top: 150px;
+      background-color: lightgray;
+    }
+    #closet{
+      float:right;
+      margin-left: 200px;
+      text-align: center;
+    }
+    #closet > article{
+      display: inline-block;
+      margin: 15px;
+    }
+    #closet > article > img{
+      height:175px;
+      width: 150px;
+    }
+    aside > h1{
+      padding:10px 0 10px 10px;
+    }
+    aside > ul {
+      width:200px;
+    }
+    aside > ul > li > a{
+      display:block;
+      color:black;
+      padding:5px 0 5px 10px;
+    }
+    aside > ul > li:hover {
+      background-color: rgba(0,0,0,0.5);
+    }
+    footer{
+      /* footer를 aside위에 올리기 위해 사용(부유객체) */
+      position: absolute;
+      height: 60px;
+      width:100%;
+      padding:0 25px;
+      bottom:0;
+      line-height: 60px;
+      color: #8a8c8f;
+      border-top: 1px solid #dee5e7;
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+      <header>
+        <!-- Logo -->
+        <a href="index.html" id="logo">
+          <h1>CHOI CLOTHES</h1>
+        </a>
+        <!-- navigation bar -->
+        <nav>
+          <ul class="nav-items">
+            <li><a href="#shop">SHOP</a></li>
+            <li><a href="#introduce">INTRODUCE</a></li>
+            <li><a href="#basket">BASKET</a></li>
+            <li><a href="#mypage">MYPAGE</a></li>
+          </ul>
+        </nav>
+      <!-- search bar -->
+      <div id="search">
+        <form id="search-bar">
+          <input type="text" name="search" placeholder=" 검색어를 입력하세요">
+          <input type="submit" value="검색">
+        </form>
+        <div id="search-history">
+          <ul>
+            <li>최근 검색어</li>
+            <li><a href="#">자켓</a></li>
+            <li><a href="#">코트</a></li>
+            <li><a href="#">로퍼</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div id="content-wrap">
+      <!-- side menu  -->
+      <aside>
+        <h1>MENU</h1>
+        <ul>
+          <li class="active"><a href="#top">TOP</a></li>
+          <li><a href="#bottom">BOTTOM</a></li>
+          <li><a href="#outer">OUTER</a></li>
+          <li><a href="SHOES">SHOES</a></li>
+        </ul>
+      </aside>
+      <!-- 옷 판매 -->
+      <section id="closet">
+        <article>
+          <img src="images/clothes.jpg" alt="옷1">
+          <p>옷</p>
+          <p>39,000원</p>
+        </article>
+        <article>
+          <img src="images/clothes.jpg" alt="옷1">
+          <p>옷</p>
+          <p>39,000원</p>
+        </article>
+        <article>
+          <img src="images/clothes.jpg" alt="옷1">
+          <p>옷</p>
+          <p>39,000원</p>
+        </article>
+        <article>
+          <img src="images/clothes.jpg" alt="옷1">
+          <p>옷</p>
+          <p>39,000원</p>
+        </article>
+        <article>
+          <img src="images/clothes.jpg" alt="옷1">
+          <p>옷</p>
+          <p>39,000원</p>
+        </article>
+        <article>
+          <img src="images/clothes.jpg" alt="옷1">
+          <p>옷</p>
+          <p>39,000원</p>
+        </article>
+        <article>
+          <img src="images/clothes.jpg" alt="옷1">
+          <p>옷</p>
+          <p>39,000원</p>
+        </article>
+        <article>
+          <img src="images/clothes.jpg" alt="옷1">
+          <p>옷</p>
+          <p>39,000원</p>
+        </article>
+        <article>
+          <img src="images/clothes.jpg" alt="옷1">
+          <p>옷</p>
+          <p>39,000원</p>
+        </article>
+        <article>
+          <img src="images/clothes.jpg" alt="옷1">
+          <p>옷</p>
+          <p>39,000원</p>
+        </article>
+        <article>
+          <img src="images/clothes.jpg" alt="옷1">
+          <p>옷</p>
+          <p>39,000원</p>
+        </article>
+      </section>
+      <!-- end of content-wrap -->
+    </div>
+    <footer>© Copyright 2021 PgmJun</footer>
+    <!-- end of wrap -->
+  </div>
+</body>
+</html>
