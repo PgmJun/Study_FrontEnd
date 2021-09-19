@@ -33,28 +33,35 @@
       box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
     }
     nav{
-      position: absolute;
+      position: relative;
+      /* 뭔가 이거 아닌거같음 수정 필요 */
+      margin-left: 1050px;
       display:inline-block;
-      right:10px;
+      width:850px;
       height:75px;
     }
     #logo{
       display: inline-block;
+      position: absolute;
       height:75px;
+      width:270px;
+      margin-left: 20px;
       line-height: 75px;
     }
     #logo > h1{
       text-align:center;
-      margin-left:20px;
       color:white;
     }
     .nav-items {
-      position: relative;
+      position: absolute;
+      text-align: center;
+      width:850px;
       top:10px;
     }
     .nav-items > li {
       display: inline-block;
-
+      text-align: center;
+      width:120px;
     }
     .nav-items > li:nth-of-type(1){
       border:1px solid white;
@@ -68,7 +75,6 @@
     }
     .nav-items > li > a {
       line-height: 45px;
-      padding:20px;
       color: gray;
     }
     .nav-items > li > a:hover{
@@ -76,12 +82,16 @@
     }
     #search{
       position: absolute;
+      top:75px;
       left:30px;
+      width:100%;
       height: 75px;
       line-height: 75px;
     }
     #search-recommend{
-      float:right;
+      position: absolute;
+      height: 75px;
+      width:230px;
     }
     #search-recommend li:nth-child(1){
       font-weight: bold;
@@ -91,8 +101,15 @@
       display: inline-block;
       padding:0 3px 0 3px;
     }
+    #search-recommend > ul > li > a{
+      color:white;
+      font-weight: bold;
+    }
     #search-bar{
-      float:right;
+      position: absolute;
+      width:700px;
+      height: 75px;
+      left:230px;
     }
     #search-bar > input[type="text"] {
       width:400px;
@@ -209,14 +226,14 @@
         </a>
         <!-- navigation bar -->
         <nav>
-          <ul class="nav-items">
-            <li><a href="#login">로그인</a></li>
-            <li><a href="#shop">마이페이지</a></li>
-            <li><a href="#introduce">장바구니</a></li>
-            <li><a href="#basket">최근 본 상품</a></li>
-            <li><a href="#mypage">주문배송조회</a></li>
-            <li><a href="#mypage">고객센터</a></li>
-          </ul>
+            <ul class="nav-items">
+              <li><a href="#login">로그인</a></li>
+              <li><a href="#shop">마이페이지</a></li>
+              <li><a href="#introduce">장바구니</a></li>
+              <li><a href="#basket">최근 본 상품</a></li>
+              <li><a href="#mypage">주문배송조회</a></li>
+              <li><a href="#mypage">고객센터</a></li>
+            </ul>
         </nav>
       <!-- search bar -->
       <div id="search">
