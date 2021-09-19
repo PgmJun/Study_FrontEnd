@@ -24,7 +24,7 @@
     }
     h1{ font-size: 2em;}
     header{
-      position: fixed;
+      position: relative;
       top:0;
       width:100%;
       height:150px;
@@ -32,11 +32,11 @@
       background-color: black;
       box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
     }
-    #wrap{
-
-    }
     nav{
-      float:right;
+      position: absolute;
+      display:inline-block;
+      right:10px;
+      height:75px;
     }
     #logo{
       display: inline-block;
@@ -48,30 +48,46 @@
       margin-left:20px;
       color:white;
     }
+    .nav-items {
+      position: relative;
+      top:10px;
+    }
     .nav-items > li {
       display: inline-block;
+
+    }
+    .nav-items > li:nth-of-type(1){
+      border:1px solid white;
+    }
+    .nav-items > li:nth-of-type(1):hover{
+      background-color: white;
+    }
+    .nav-items > li:nth-of-type(1) > a:hover{
+      transition:0;
+      color:black;
     }
     .nav-items > li > a {
-      line-height: 75px;
-      padding:30px;
+      line-height: 45px;
+      padding:20px;
       color: gray;
     }
     .nav-items > li > a:hover{
-      transition: 0.3s;
       color:lightgray;
     }
     #search{
+      position: absolute;
+      left:30px;
       height: 75px;
       line-height: 75px;
     }
-    #search-history{
+    #search-recommend{
       float:right;
     }
-    #search-history li:nth-child(1){
+    #search-recommend li:nth-child(1){
       font-weight: bold;
       color: gray;
     }
-    #search-history > ul > li {
+    #search-recommend > ul > li {
       display: inline-block;
       padding:0 3px 0 3px;
     }
@@ -90,7 +106,6 @@
       margin-right: 30px;
     }
     #content-wrap {
-      margin-top: 150px;
       min-height: 100vh; /* 최소 높이를 지정 */
       display: flex;
       flex-direction: column;
@@ -102,14 +117,16 @@
       clear: both;
     }
     aside{
-      position: fixed;
-      top:0;
-      bottom:0;
-      width:200px;
-      margin-top: 150px;
-      background-color: lightgray;
+      position: absolute;
+      width:250px;
+      height: 100%;
+      background-color: #F2F2F2;
+    }
+    aside > div{
+      border-bottom: 1px lightgray solid;
     }
     #closet{
+      position: relative;
       float:right;
       margin-left: 200px;
       text-align: center;
@@ -117,24 +134,57 @@
     #closet > article{
       display: inline-block;
       margin: 15px;
+      padding:15px;
     }
     #closet > article > img{
       height:175px;
       width: 150px;
     }
-    aside > h1{
-      padding:10px 0 10px 10px;
+    #aside-ranking{
+      position: absolute;
+      width:250px;
+      height:400px;
+      padding:10px 20px;
+      color:black;
     }
-    aside > ul {
+    #aside-ranking > h5 {
+      margin-top: 3px;
+    }
+    #aside-ranking > ul {
+      margin-top:10px;
+    }
+    #aside-ranking li {
+      display:inline-block;
+      width:100px;
+      margin-bottom: 3px;
+    }
+    .ranking-item {
+      color:gray;
+      width:100px;
+    }
+    .ranking-item:hover {
+      text-decoration: underline;
+    }
+    #aside-style{
+      position: absolute;
+      top:400px;
+      width:250px;
+      height:400px;
+      padding:10px 20px;
+      color:black;
+    }
+    #aside-style > ul{
+      margin-top: 3px;
+    }
+    #aside-style > ul > li{
+      margin-bottom: 3px;
       width:200px;
     }
-    aside > ul > li > a{
-      display:block;
-      color:black;
-      padding:5px 0 5px 10px;
+    .style-list{
+      color:gray;
     }
-    aside > ul > li:hover {
-      background-color: rgba(0,0,0,0.5);
+    .style-list:hover{
+      text-decoration: underline;
     }
     footer{
       /* footer를 aside위에 올리기 위해 사용(부유객체) */
@@ -160,10 +210,12 @@
         <!-- navigation bar -->
         <nav>
           <ul class="nav-items">
-            <li><a href="#shop">SHOP</a></li>
-            <li><a href="#introduce">INTRODUCE</a></li>
-            <li><a href="#basket">BASKET</a></li>
-            <li><a href="#mypage">MYPAGE</a></li>
+            <li><a href="#login">로그인</a></li>
+            <li><a href="#shop">마이페이지</a></li>
+            <li><a href="#introduce">장바구니</a></li>
+            <li><a href="#basket">최근 본 상품</a></li>
+            <li><a href="#mypage">주문배송조회</a></li>
+            <li><a href="#mypage">고객센터</a></li>
           </ul>
         </nav>
       <!-- search bar -->
@@ -172,9 +224,9 @@
           <input type="text" name="search" placeholder=" 검색어를 입력하세요">
           <input type="submit" value="검색">
         </form>
-        <div id="search-history">
+        <div id="search-recommend">
           <ul>
-            <li>최근 검색어</li>
+            <li>추천 검색어</li>
             <li><a href="#">자켓</a></li>
             <li><a href="#">코트</a></li>
             <li><a href="#">로퍼</a></li>
@@ -185,13 +237,33 @@
     <div id="content-wrap">
       <!-- side menu  -->
       <aside>
-        <h1>MENU</h1>
-        <ul>
-          <li class="active"><a href="#top">TOP</a></li>
-          <li><a href="#bottom">BOTTOM</a></li>
-          <li><a href="#outer">OUTER</a></li>
-          <li><a href="SHOES">SHOES</a></li>
-        </ul>
+        <div id="aside-ranking">
+          <h3>랭킹</h3>
+          <h5>상품</h5>
+          <ul>
+            <li><a href="#" class="ranking-item">전체</a></li>
+            <li><a href="#" class="ranking-item">상의</a></li>
+            <li><a href="#" class="ranking-item">아우터</a></li>
+            <li><a href="#" class="ranking-item">바지</a></li>
+            <li><a href="#" class="ranking-item">원피스</a></li>
+            <li><a href="#" class="ranking-item">스커트</a></li>
+            <li><a href="#" class="ranking-item">스니커즈</a></li>
+            <li><a href="#" class="ranking-item">코트</a></li>
+            <li><a href="#" class="ranking-item">모자</a></li>
+            <li><a href="#" class="ranking-item">신발</a></li>
+            <li><a href="#" class="ranking-item">악세서리</a></li>
+            <li><a href="#" class="ranking-item">주얼리</a></li>
+          </ul>
+        </div>
+        <div id="aside-style">
+          <h3>스타일</h3>
+          <ul>
+            <li><a href="#brandsnap" class="style-list">브랜드스냅</a></li>
+            <li><a href="#codishop" class="style-list">코디숍</a></li>
+            <li><a href="#codimap" class="style-list">코디맵</a></li>
+          </ul>
+        </div>
+
       </aside>
       <!-- 옷 판매 -->
       <section id="closet">
